@@ -3,10 +3,10 @@ import { useState, useEffect } from "react";
 import Trailer from "@/component/Trailer";
 
 export default function Page({ params }: { params: { id: string } }) {
-  const [movieData, setMovieData] = useState(null);
-  const [movieData1, setMovieData1] = useState(null);
-  const [movieData2, setMovieData2] = useState(null);
-  const [movieData3, setMovieData3] = useState(null);
+  const [movieData, setMovieData] = useState<any>(null);
+  const [movieData1, setMovieData1] = useState<any>(null);
+  const [movieData2, setMovieData2] = useState<any>(null);
+  const [movieData3, setMovieData3] = useState<any>(null);
   
 
 

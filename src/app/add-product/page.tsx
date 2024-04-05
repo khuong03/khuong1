@@ -61,7 +61,7 @@ const SignupForm = () => {
     headers: {
       authorization: "authorization-text",
     },
-    onChange(info) {
+    onChange(info: any): void {
       if (info.file.status !== "uploading") {
         console.log(info.file, info.fileList);
       }
@@ -149,8 +149,8 @@ const SignupForm = () => {
                 placeholder="Chọn danh mục"
                 onChange={(value) => formik.setFieldValue("category", value)}
               >
-                {categories.map((category) => (
-                  <Select.Option key={category._id} value={category._id}>
+                {categories.map((category: any, index) => (
+                  <Select.Option key={index} value={category?._id}>
                     {category.name}
                   </Select.Option>
                 ))}

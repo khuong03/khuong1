@@ -1,8 +1,10 @@
 "use client";
 import { useState, useEffect } from "react";
-import { Space, Table, Tag } from "antd";
+import { Space, Table, Tag} from "antd";
 import Page from "../edit-product/[id]/page";
 import Link from 'next/link';
+import type { TableProps } from 'antd';
+
 const { Column, ColumnGroup } = Table;
 
 

@@ -2,10 +2,10 @@
 import React, { useState, useRef,useEffect } from 'react';
 import { Button, Modal } from 'antd';
 
-const Trailer: React.FC = ({videoId, name}) => {
+const Trailer = ({videoId, name}:any) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const iframeRef = useRef(null); 
-  console.log(iframeRef.current?.setAttribute("src", ""));
+ 
   
   const showModal = () => {
    
@@ -22,9 +22,9 @@ const Trailer: React.FC = ({videoId, name}) => {
   };
   useEffect(() => {
    if (isModalOpen ) {
-    iframeRef.current?.setAttribute("src", `https://www.youtube.com/embed/${videoId}?autoplay=1`)
+      (iframeRef.current as any)?.setAttribute("src", `https://www.youtube.com/embed/${videoId}?autoplay=1`)
    }else{
-    iframeRef.current?.setAttribute("src", "")
+    (iframeRef.current as any)?.setAttribute("src", "")
    }
     
   }, [isModalOpen]);

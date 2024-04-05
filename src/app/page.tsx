@@ -5,8 +5,8 @@ import { Pagination } from "antd";
 import Link from 'next/link'
 
 export default function Page() {
-  const [movieData, setMovieData] = useState(null);
-  const [currentPage, setCurrentPage] = useState(1);
+  const [movieData, setMovieData] = useState<any>(null);
+  const [currentPage, setCurrentPage] = useState<any>(1);
 
   useEffect(() => {
     fetchData();
@@ -38,7 +38,7 @@ export default function Page() {
       <div className="container mx-auto"></div>
       {movieData ? (
         <div className="grid grid-cols-5">
-          {movieData.results.map((movie, index) => (
+          {movieData?.results?.map((movie :any, index :any) => (
             <div key={index} className="border border-gray-100 p-2 rounded-lg">
              <Link href={`/movie/${movie?.id}`}>
              <img
